@@ -1,0 +1,39 @@
+<!-- moviess.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Movies:</h1><!-- moviess.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Recommendations</title>
+    </head>
+    <body>
+        <h1>Movie Recommendations</h1>
+        <form method="post">
+            <label for="movie_name">Enter a movie name:</label>
+            <input type="text" name="movie_name" required>
+            <input type="submit" value="Get Recommendations">
+        </form>
+    
+        {% if recommendations %}
+            <h2>Recommended Movies:</h2>
+            <ul>
+                {% for movie in recommendations %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </body>
+    </html>
+    
+   
+</body>
+</html>
